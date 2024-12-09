@@ -23,7 +23,7 @@ if (isset($_SESSION["tituloEmail"])) {
     $mail->Port = 465;
 
     $mail->setFrom("douglasgv0502@gmail.com");
-    $mail->addAddress("douglasgv0502@gmail.com"); // correo al que enviaremos
+    $mail->addAddress($email); // correo al que enviaremos
     $mail->isHTML(true);
     $mail->Subject = $titulo;
     $mail->Body = '<h1>'.$mensaje.'</h1>';

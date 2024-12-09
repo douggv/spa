@@ -1,9 +1,11 @@
 <?php 
 include '../../app/config.php';
+
 ?>
 
 <?php include '../layout/cabecera.php';?>
 <?php include '../layout/nav.php';?>
+
 <?php 
     $sql = "SELECT * FROM usuarios WHERE id = '$id_usuario_sesion' ";
     $query = $pdo->prepare($sql);
@@ -18,10 +20,12 @@ include '../../app/config.php';
         $telefono = $usuario["telefono"];
         $rol = $usuario["rol"];
     }
-
+    
 ?>
+
+<?php include '../../admin/layout/mensaje.php';?>
 <h2>Mis datos</h2>
-<form action="../../app/controllers_clientes/usuarios/actualizar.php" method="post">
+<form action="../../app/controllers_clientes/perfil/update.php" method="post">
                         <div class="row">
                             
                                 <input value = "<?=$rol;?>" class="form-control form-control-rosado" type="text" name="rol"  hidden>
@@ -40,7 +44,7 @@ include '../../app/config.php';
                                     <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="">Cedula</label>
-                                        <input value="<?=$cedula;?>" class="form-control form-control-rosado" type="text" name="cedula" placeholder="Ingresa la cedula" required title="Solo Numeros" pattern="[0-9]*" minlength="7" maxlength="8">
+                                        <input disabled value="<?=$cedula;?>" class="form-control form-control-rosado" type="text" name="cedula" placeholder="Ingresa la cedula" required title="Solo Numeros" pattern="[0-9]*" minlength="7" maxlength="8">
                                     </div>
                                     </div>
                                 </div>
@@ -48,7 +52,7 @@ include '../../app/config.php';
                                     <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="">Email</label>
-                                        <input value="<?=$email;?>" class="form-control form-control-rosado" type="email" name="email" placeholder="Ingresa el correo electronico" required>
+                                        <input disabled value="<?=$email;?>" class="form-control form-control-rosado" type="email" name="email" placeholder="Ingresa el correo electronico" required>
                                     </div>
                                     </div>
                                     <div class="col-md-4">
@@ -67,5 +71,5 @@ include '../../app/config.php';
                                     <input style="background-color:#FF69B4; border-color:#FF69B4 " type="submit" class="btn btn-success w-40" value="Actualizar">
                                     </div>
                                 </div>
-                                <input type="text" name="id_usuario" value="<?= $id_usuario; ?>" hidden>
+                                <input type="text" name="id_usuario" value="<?= $id; ?>" hidden>
                         </form>

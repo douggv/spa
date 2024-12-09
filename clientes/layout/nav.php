@@ -34,7 +34,7 @@ include("validacion.php");
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="<?= $URL ?>">Inicio</a>
+                    <a class="nav-link active" aria-current="page" href="<?= $URL ?>/clientes/index.php">Inicio</a>
                     <a class="nav-link" href="<?php echo $URL ?>/clientes/servicios/index.php">Contacto</a>
                     <a class="nav-link" href="<?php echo $URL ?>/clientes/servicios/index.php">Servicios</a>
                     

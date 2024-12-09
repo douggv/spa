@@ -1,30 +1,26 @@
 <?php
-
-include '../../app/config.php';
-include "<?php echo $URL; ?>clientes/layout/validacion.php; ?>";
+include '../../config.php';
 
 $nombre = $_POST["nombre"];
 $apellido = $_POST["apellido"];
 $telefono = $_POST["telefono"];
-$email = $_POST["email"];
-$rol = $_POST["rol"];
-$sentencia = $pdo->prepare("UPDATE usuarios 
+
+$id = $_POST["id_usuario"];
+
+$query = $pdo->prepare("UPDATE usuarios 
 SET nombre = :nombre,
 apellido = :apellido,  
-telefono = :telefono,
-
+telefono = :telefono
 WHERE id = :id_usuario");
 
-$sentencia->bindParam(':nombre', $nombre);
-$sentencia->bindParam(':apellido', $apellido);
-$sentencia->bindParam(':cedula', $cedula);
-$sentencia->bindParam(':email', $email);
-$sentencia->bindParam(':telefono', $telefono);
-$sentencia->bindParam(':rol', $rol);
-$sentencia->bindParam(':id_usuario', $id_usuario_sesion);
-if ($sentencia->execute()) {
+$query->bindParam(":nombre", $nombre, PDO::PARAM_STR);
+$query->bindParam(":apellido", $apellido, PDO::PARAM_STR);
+$query->bindParam(":telefono", $telefono,PDO::PARAM_STR);
+$query->bindParam(":id_usuario", $id, PDO::PARAM_INT);
 
-    $mensaje = "Un usuario ha sido actualizado" . " correo: " . $email . "con el rol de " . $rol . " Por parte del cliente" .  
+if ($query->execute()) {
+
+    $mensaje = "Un usuario ha sido actualizado con el nombre de: " . $nombre;
     $sql = "INSERT INTO auditorias (mensaje) VALUES (?)";
     $query = $pdo->prepare($sql);
     $query->bindParam(1, $mensaje, PDO::PARAM_STR);

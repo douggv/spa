@@ -23,7 +23,7 @@ include "nav.php";
                             <label for="tipoUsuario" class="form-label" style="color: black;">Tipo de usuario</label>
                             <select name="rol" class="form-select" id="tipoUsuario" style="">
                                 <option value="cliente">Cliente</option>
-                                <option value="empresa">Empresa</option>
+                                <option value="empresa">Gerente</option>
                             </select>
                         </div>
                         <div class="mb-3">
@@ -32,7 +32,8 @@ include "nav.php";
                         </div>
                         <button type="submit" class="btn btn-primary" style="background-color:#FF69B4; border-color: #FF69B4;">Iniciar sesión</button>
                     </form>
-                    <p class="text-center" style="color: black;">¿Ya tienes cuenta? <a href="<?= $URL ?>/registro.php" style="color: black;">Regístrate aquí</a></p>
+                    <p class="text-center" style="color: black;">¿No tienes cuenta? <a href="<?= $URL ?>/registro.php" style="color: black;">Regístrate aquí</a></p>
+                    <p class="text-center" style="color: black;">¿Olvidaste tu contraseña? <a href="<?= $URL ?>/recuperar.php" style="color: black;">Recuperar contraseña</a></p>
                 </div>
             </div>
         </div>
