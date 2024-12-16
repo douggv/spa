@@ -5,7 +5,7 @@
     $fyh_creacion = date('Y-m-d H:i:s');
     $fyh_actualizacion = date('Y-m-d H:i:s');
     $URL = "http://localhost/spa";
-    define("APP_NAME", "Rullier");
+    define("APP_NAME", "Rullier Beauty "); 
 
     define("SERVIDOR", "localhost");
     define("USUARIO", "root");

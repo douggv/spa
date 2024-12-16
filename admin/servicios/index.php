@@ -41,7 +41,7 @@
                                         <td><img src="<?php echo $URL; ?>/public/images/servicios/<?php echo $servicio["imagen"]; ?>" width="100px" alt="ad"></td>
                                         <td>
                                         <div class="btn-group" role="group" aria-label="Basic example">
-                                            <a href="create.php?id=<?php echo $id_servicio ?>" class="btn btn-rosado"><i class="bi bi-eye-fill"></i> Ver</a>
+                                            <a href="show.php?id=<?php echo $id_servicio ?>" class="btn btn-rosado"><i class="bi bi-eye-fill"></i> Ver</a>
                                             <a href="update.php?id=<?php echo $id_servicio ?>" class="btn btn-verde"><i class="bi bi-pencil-square"></i> Actualizar</a>
                                             <a href="delete.php?id=<?php echo $id_servicio ?>" class="btn btn-rojo"><i class="bi bi-trash3-fill"></i> Eliminar</a>
                                         </div>

@@ -29,8 +29,8 @@
             header(header: "Location: ".$URL."/clientes/index.php");   
         }else{
             session_start();
-            $_SESSION['mensaje2'] = "Inicio de sesion exitoso";
-            $_SESSION['icono2'] = "success";
+            $_SESSION['mensaje'] = "Inicio de sesion exitoso";
+            $_SESSION['icono'] = "success";
             session_start();
             $_SESSION['email'] = $email;
             header(header: "Location: ".$URL."/admin/index.php");

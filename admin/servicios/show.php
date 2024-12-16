@@ -1,125 +1,118 @@
 <?php
-include ('../../app/config.php');
-include ('../../admin/layout/parte1.php');
-$id_producto = $_GET['id_producto'];
-include ('../../app/controllers/productos/datos_del_producto.php');
-?>
+    include '../../app/config.php';
+    include ('../../app/controllers/servicios/listado_de_servicios.php');
+    
+    $servicio_id = $_GET['id'];
+    include ('../../app/controllers/servicios/datos_del_servicio.php');
+    
+?>   
+<?php include '../../admin/layout/parte1.php';?>
+<?php include '../../admin/layout/mensaje.php';?>
 
-<br>
+
 <div class="container-fluid">
-
-    <h1>Información del Producto</h1>
-
+    <h1 class="text-center">Datos del Servicio</h1>  
     <div class="row">
-        <div class="col-md-12">
-            <div class="card card-outline card-primary">
-                <div class="card-header">
-                    <h3 class="card-title"><b>Datos del producto</b></h3>
-                </div>
-                <div class="card-body">
-
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+                    
+                        
+                    <div class="card-body">
+                        
+                        
+                        
                         <div class="row">
-                            <div class="col-md-9">
-                                <div class="row">
-                                    <div class="col-md-2">
-                                        <div class="form-group">
-                                            <label for="">Código</label>
-                                            <input type="text" class="form-control" value="<?= $codigo; ?>" disabled>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label for="">Nombre del producto</label>
-                                            <input type="text" name="nombre_producto" value="<?=$nombre_producto;?>" class="form-control" disabled>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="">Descripción</label>
-                                            <input type="text" name="descripcion" value="<?=$descripcion;?>" class="form-control" disabled>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-2">
-                                        <div class="form-group">
-                                            <label for="">Stock</label>
-                                            <input type="number" name="stock" value="<?=$stock;?>" class="form-control" disabled>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="form-group">
-                                            <label for="">Stock mínimo</label>
-                                            <input type="number" name="stock_minimo" value="<?=$stock_minimo;?>" class="form-control" disabled>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="form-group">
-                                            <label for="">Stock máximo</label>
-                                            <input type="number" name="stock_maximo" value="<?=$stock_maximo;?>" class="form-control" disabled>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="form-group">
-                                            <label for="">Precio compra</label>
-                                            <input type="number" name="precio_compra" value="<?=$precio_compra;?>" class="form-control" disabled>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="form-group">
-                                            <label for="">Precio venta</label>
-                                            <input type="number" name="precio_venta" value="<?=$precio_venta;?>" class="form-control" disabled>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="form-group">
-                                            <label for="">Fecha de ingreso</label>
-                                            <input type="text" name="fecha_de_ingreso" value="<?=$fecha_de_ingreso;?>" class="form-control" disabled>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label for="">Categoria</label>
-                                            <input type="text" name="tipo_producto" value="<?=$tipo_producto;?>" class="form-control" disabled>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label for="">Usuario de registro</label>
-                                            <input type="text" name="fecha_de_ingreso" value="<?=$nombre_completo;?>" class="form-control" disabled>
-                                        </div>
-                                    </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="">Nombre</label>
+                                    <input readonly value="<?=$nombre;?>" class="form-control form-control-rosado" type="text" name="nombre" placeholder="Ingresa el nombre" required pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" title="Solo letras" minlength="3" maxlength="40">
                                 </div>
                             </div>
-
-                            <div class="col-md-3">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="">Descripcion</label>
+                                    <input readonly value="<?=$descripcion;?>" class="form-control form-control-rosado" type="text" name="descripcion" placeholder="Ingresa el apellido" required pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" title="Solo letras"  maxlength="300">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="">Precio</label>
+                                    <input readonly value="<?=$precio;?>" class="form-control form-control-rosado" type="text" name="precio" placeholder="Ingresa la cedula"  title="Solo Numeros">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Categoria</label>
+                                    <input readonly type="text" value="<?=$categoria;?>" class="form-control form-control-rosado" type="text" name="categoria" placeholder="Ingresa la cedula">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="">Imagen</label>
+                                    
                                     <br>
-                                    <img src="<?= $URL."/public/images/productos/".$imagen;?>" width="200px" alt="">
+                                    <center>
+                                        <output id="list">
+                                        <img src="<?=$URL."/public/images/servicios/".$imagen;?>" width="80%" alt="">                                            </output>
+                                    </center>
+                                    <input type="text" value="<?= $servicio_id;?>" name="servicio_id" hidden>
+                                    <input type="text" value="<?= $imagen;?>" name="imagen" hidden >
                                 </div>
                             </div>
                         </div>
-                        <input type="text" name="id_usuario" value="<?= $id_usuario_sesion; ?>" hidden>
-                        <hr>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <a href="index.php" class="btn btn-secondary">Cancelar</a>
 
-                            </div>
-                        </div>
+                        <input type="text" name="servicio_id" value="<?= $servicio_id; ?>" hidden>
 
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 </div>
 
-<?php
-include ('../../admin/layout/parte2.php');
-include ('../../admin/layout/mensaje.php');
-?>
+<?php include '../../admin/layout/parte2.php';?>
+
+<style>
+.form-control-rosado {
+    border: 1px solid #FFC5C5;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-control-rosado:focus {
+    border-color: #FF69B4;
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+    background-color: #FFF0F0;
+}
+</style>
 
 
+
+
+
+<script>
+    function archivo(evt) {
+        var files = evt.target.files; // FileList object
+        // Obtenemos la imagen del campo "file".
+        for (var i = 0, f; f = files[i]; i++) {
+            //Solo admitimos imágenes.
+            if (!f.type.match('image.*')) {
+                continue;
+            }
+            var reader = new FileReader();
+            reader.onload = (function (theFile) {
+                return function (e) {
+                    // Insertamos la imagen
+                    document.getElementById("list").innerHTML = ['<img class="thumb thumbnail" src="',e.target.result, '" width="200px" title="', escape(theFile.name), '"/>'].join('');
+                };
+            })(f);
+            reader.readAsDataURL(f);
+        }
+    }
+    document.getElementById('file').addEventListener('change', archivo, false);
+</script>
+<?php include '../../admin/layout/parte2.php';?>

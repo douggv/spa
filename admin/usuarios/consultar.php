@@ -23,8 +23,8 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="">Nombre Completo</label>
-                                        <input readonly value="<?php echo $nombre_completo; ?>" class ="form-control" type="text" class="form-control" name="nombre_completo"
+                                        <label for="">Nombre </label>
+                                        <input readonly value="<?php echo $nombre; ?>" class ="form-control" type="text" class="form-control" name="nombre"
                                         required
                                         pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
                                         title="Solo letras"
@@ -60,17 +60,12 @@
                                         maxlength = "17">
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label  for="">Direccion</label>
-                                        <input readonly value="<?php echo $direccion; ?>" class ="form-control" type="text" class="form-control" name="direccion"
-                                    >
-                                    </div>
+
                                 </div>
                                 <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="">Cargo</label>
-                                            <input readonly value="<?php echo $cargo; ?>" class ="form-control" type="text" class="form-control" name="cargo"
+                                            <input readonly value="<?php echo $rol; ?>" class ="form-control" type="text" class="form-control" name="cargo"
                                             >
                                         </div>
                                     </div>

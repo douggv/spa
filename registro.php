@@ -31,6 +31,7 @@ include "nav.php";
                                         title="Solo letras"
                                         minlength="3"
                                         maxlength="40"
+                                        
                             class="form-control" id="apellido" style="border-color: #FFC0CB;">
                         </div>
                         <div class="mb-3">
@@ -39,6 +40,7 @@ include "nav.php";
                             placeholder=" Ingresa el numero de telefono" 
                             minlength ="10"
                             maxlength = "17"
+                            required
                             style="border-color: #FFC0CB;">
                         </div>
                         <div class="mb-3">
@@ -48,7 +50,9 @@ include "nav.php";
                                         title="Solo Numeros"
                                         pattern="[0-9]*"
                                         minlength ="7"
-                                        maxlength = "8" style="border-color: #FFC0CB;">
+                                        maxlength = "8"
+                                        required 
+                                        style="border-color: #FFC0CB;">
                         </div>
                         <div class="mb-3">
                             <label for="correo" class="form-label" style="color: black;">Correo electrónico</label>
@@ -62,6 +66,7 @@ include "nav.php";
                             placeholder="Ingresa la Contraseña" 
                             minlength="3"
                             maxlength="20"
+                            required
                             type="password" class="form-control" id="contraseña" style="border-color: #FFC0CB;">
                         </div>
                         <div class="mb-3">
@@ -70,6 +75,7 @@ include "nav.php";
                             placeholder="Ingresa la Contraseña de nuevo" 
                             minlength="3"
                             maxlength="20"
+                            required
                             class="form-control" id="contraseña" style="border-color: #FFC0CB;">
                         </div>
                         <button type="submit" class="btn btn-primary" style="background-color:#FF69B4; border-color:#FF69B4 ">Regístrate</button>

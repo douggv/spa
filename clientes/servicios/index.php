@@ -7,17 +7,7 @@ include '../../app/config.php';
 <?php include '../../app/controllers_clientes/servicios/listado_servicios.php"'; ?>
 <?php include '../../admin/layout/mensaje.php".'; ?>
 
-<script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var calendarEl = document.getElementById('calendar');
-            var calendar = new FullCalendar.Calendar(calendarEl, {
-            initialView: 'dayGridMonth', 
-            local : 'es',
-            
-            });
-            calendar.render();
-        });
-</script>
+
 
 
 

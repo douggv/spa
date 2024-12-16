@@ -2,6 +2,7 @@
     include '../app/config.php';
 ?>     
 <?php include '../admin/layout/parte1.php';?>
+<?php include '../admin/layout/mensaje.php';?>
     
     <div  class="container-fluid">
         <div class="row">

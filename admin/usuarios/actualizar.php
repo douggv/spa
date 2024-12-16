@@ -54,11 +54,11 @@
                             <div class="form-group">
                                 <label for="">Cargo</label>
                                 <select name="rol" id="" class="form-control form-control-rosado">
-                                    <option value="Cliente" <?php if ($rol == "Cliente") echo "selected"; ?>>Cliente</option>
-                                    <option value="Peluqero" <?php if ($rol == "Peluqero") echo "selected"; ?>>Peluqera</option>
-                                    <option value="Manicurista" <?php if ($rol == "Manicurista") echo "selected"; ?>>Manicurista</option>
-                                    <option value="Esticista" <?php if ($rol == "Esticista") echo "selected"; ?>>Esticista</option>
-                                    <option value="Masajista" <?php if ($rol == "Masajista") echo "selected"; ?>>Masajista</option>
+                                    <option value="cliente" <?php if ($rol == "cliente") echo "selected"; ?>>Cliente</option>
+                                    <option value="peluqero" <?php if ($rol == "peluqero") echo "selected"; ?>>Peluqera</option>
+                                    <option value="manicurista" <?php if ($rol == "manicurista") echo "selected"; ?>>Manicurista</option>
+                                    <option value="esticista" <?php if ($rol == "esticista") echo "selected"; ?>>Esticista</option>
+                                    <option value="masajista" <?php if ($rol == "masajista") echo "selected"; ?>>Masajista</option>
                                 </select>
                             </div>  
                         </div>
