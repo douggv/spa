@@ -99,11 +99,7 @@
                 }
                 ]
             },
-                {
-                    extend: 'colvis',
-                    text: 'Visor de columnas',
-                    collectionLayout: 'fixed three-column'
-                }
+
             ],
         }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
     });

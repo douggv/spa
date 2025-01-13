@@ -9,10 +9,8 @@
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-10">
-                    <div class="card card-outline card-primary">
-                        <div class="card-header">
-                            <h3 class="card-title font-weight-bold">Información del Usuario</h3>
-                    </div>
+                    <div class="card card-outline ">
+                        
                     <div class="card-body">
                         
                         

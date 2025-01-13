@@ -21,7 +21,7 @@ include "nav.php";
                         </div>
                         <div class="mb-3">
                             <label for="tipoUsuario" class="form-label" style="color: black;">Tipo de usuario</label>
-                            <select name="rol" class="form-select" id="tipoUsuario" style="">
+                            <select name="rol" class="form-select" id="tipoUsuario" >
                                 <option value="cliente">Cliente</option>
                                 <option value="empresa">Gerente</option>
                             </select>
