@@ -57,7 +57,7 @@ if($contraseña == $contraseña_verificacion){
             // Envio de  Email
 
             $_SESSION["tituloEmail"] = "Rullier Spa";
-            $_SESSION["mensajeEmail"] = "Bienvenida " . $nombre ."a Rullier Spa donde podras ofrecerle a tu cuerpo un tratamiento que te ayudara a mejorar tu salud y tu belleza";
+            $_SESSION["mensajeEmail"] = "Bienvenid@ " . $nombre ." al Spa Rullier Beauty donde podras ofrecerle a tu cuerpo un tratamiento que te ayudara a mejorar tu salud y tu belleza";
             $_SESSION["emailEnviar"] = $email;
             header("Location: ".$URL."/login.php");
             

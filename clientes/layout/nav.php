@@ -30,7 +30,7 @@ include("validacion.php");
         
         <nav style ="background-color:#ffa6c5" class="navbar navbar-expand-lg ">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.php"><img width="80px" src="<?= $URL ?>/assets/img/logo.png" alt=""></a>
+                <a class="navbar-brand" href="index.php"><img width="80px" src="<?= $URL ?>/assets/img/logo2.png" alt=""></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
@@ -42,9 +42,9 @@ include("validacion.php");
                             Servicios
                         </a>
                         <ul  class="dropdown-menu">
-                            <li><a class="dropdown-item" href="login.php" style="transition: color 0.2s ease;">Manicura</a></li>
-                            <li><a class="dropdown-item" href="login.php" style="transition: color 0.2s ease;">Estética</a></li>
-                            <li><a class="dropdown-item" href="login.php" style="transition: color 0.2s ease;">Peluqueria</a></li>
+                            <li><a class="dropdown-item" href="<?= $URL ?>/clientes/servicios/manicura/index.php" style="transition: color 0.2s ease;">Manicura</a></li>
+                            <li><a class="dropdown-item" href="<?= $URL ?>/clientes/servicios/estetica/index.php" style="transition: color 0.2s ease;">Estética</a></li>
+                            <li><a class="dropdown-item" href="<?= $URL ?>/clientes/servicios/peluqueria/index.php" style="transition: color 0.2s ease;">Peluqueria</a></li>
                             <li><a class="dropdown-item" href="<?= $URL ?>/clientes/servicios/masajes/index.php" style="transition: color 0.2s ease;">Masajes</a></li>
                         </ul>
                     </li>

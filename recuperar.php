@@ -13,7 +13,7 @@ include "nav.php";
         <div class="col-md-6">
             <div class="card" style="background-color: #ffd3e2; margin-top: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
                 <div class="card-body">
-                    <h2 class="text-center" style="color: black;">Iniciar sesión</h2>
+                    <h2 class="text-center" style="color: black;">Recuperar Contraseña</h2>
                     <form class="text-center" action="app/controllers_clientes/login/recuperar.php" method="POST">
                         <div class="mb-3">
                             <label for="correo" class="form-label" style="color: black;">Correo Electronico</label>

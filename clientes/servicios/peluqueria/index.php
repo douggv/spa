@@ -2,7 +2,7 @@
 include '../../../app/config.php';
 
 
-$sql = "SELECT * FROM services where categoria = 'masajista' ";
+$sql = "SELECT * FROM services where categoria = 'peluquera' ";
 $query = $pdo->prepare($sql);
 $query->execute();
 $servicios = $query->fetchAll(PDO::FETCH_ASSOC);

@@ -23,6 +23,7 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href=" <?= $URL ?>/public/template/AdminLTE-3.2.0/plugins/fontawesome-free/css/all.min.css">
     <!-- Theme style -->
+    <link rel="shortcut icon" href="" type="image/x-icon">
     <link rel="stylesheet" href="<?= $URL ?>/public/template/AdminLTE-3.2.0/dist/css/adminlte.min.css">
     <link rel="stylesheet" href="<?php echo $URL ?>admin/style.css">
     <!-- jQuery -->
@@ -66,7 +67,7 @@
     <aside class="main-sidebar sidebar-rosado elevation-4">
         <!-- Brand Logo -->
         <a href="<?= $URL ?>/admin" class="brand-link">
-        <img src="<?= $URL ?>/assets/img/logo.png" alt="" class="brand-image img-circle elevation-3" style="opacity: .8">
+        <img src="<?= $URL ?>/assets/img/logo2.png" alt="" class="brand-image img-circle elevation-3" style="opacity: .8">
         <span class="brand-text font-weight-light"><?= APP_NAME ?></span>
         </a>
 

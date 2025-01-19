@@ -38,7 +38,7 @@ include "nav.php";
                             class="form-control" id="contraseña" style="border-color: #FFC0CB;">
                         </div>                        
                         <input hidden type="text" name="email" value="<?php echo $email; ?>">
-                        <button type="submit" class="btn btn-primary" style="background-color:#FF69B4; border-color: #FF69B4;">Verificar Códico</button>
+                        <button type="submit" class="btn btn-primary" style="background-color:#FF69B4; border-color: #FF69B4;">Guardar Contraseña</button>
                     </form>                    
                 </div>
             </div>
