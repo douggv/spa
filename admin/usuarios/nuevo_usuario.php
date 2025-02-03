@@ -55,7 +55,7 @@
                                 <label for="">Cargo</label>
                                 <select name="rol" id="" class="form-control form-control-rosado">
                                     <option value="Cliente">Cliente</option>
-                                    <option value="Peluqero">Peluqera</option>
+                                    <option value="Peluquera">Peluquera</option>
                                     <option value="Manicurista">Manicurista</option>
                                     <option value="Esticista">Esticista</option>
                                     <option value="Masajista">Masajista</option>
@@ -79,7 +79,7 @@
                         <hr>
                         <div class="row">
                             <div class="col-md-12">
-                            <a class="btn btn-secondary w-40" href="index.php">Regresar</a>
+                            <a class="btn btn-secondary w-40" href="../index.php">Regresar</a>
                             <input style="background-color:#FF69B4; border-color:#FF69B4 " type="submit" class="btn btn-success w-40" value="Registrar">
                             </div>
                         </div>

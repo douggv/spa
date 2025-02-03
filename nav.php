@@ -35,8 +35,8 @@ include 'app/config.php';
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-link active" aria-current="page" href="<?= $URL ?>">Inicio</a>
-                    <a class="nav-link" href="#">Contacto</a>
-                    <a class="nav-link" href="#">Servicios</a>
+                    <a class="nav-link" href="<?= $URL ?>/contacto.php">Contacto</a>
+
                     
                 </div>
                 <div style="margin-left: auto;">

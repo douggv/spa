@@ -1,7 +1,7 @@
 <?php include '../../app/config.php';?>    
 <?php include '../../admin/layout/parte1.php';?>
 <?php include '../../admin/layout/mensaje.php';?>
-<?php include '../../app/controllers/reservas/lista_reservas_totales.php';?> 
+<?php include '../../app/controllers/reservas/lista_reservas_aceptadas.php';?> 
 <div class="container-fluid">
 <h1>Listado de Reservas</h1>
 
@@ -37,18 +37,19 @@
                         $id_reserva = $reserva['id'];
                         ?>
                         <tr>
-                            <td><center><?= $contador; ?></center></td>
-                            <td> <?= $reserva['title']; ?></td>
+                        <td><center><?= $contador; ?></center></td>
+                            <td> <?= $reserva['servicio_nombre']; ?></td>
                             <td> <?= $reserva['fecha_cita']; ?></td>
                             <td> <?= $reserva['hora_cita']; ?></td>
-                            <td> <?= $reserva['usuario']; ?></td>
-                            <td> <?= $reserva['metodo_pago']; ?></td>
+                            <td> <?= $reserva['usuario_nombre']; ?></td>
+                            <td> <?= $reserva['forma_pago']; ?></td>
                             <td> <?= $reserva['nombre_pago']; ?></td>
                             <td> <?= $reserva['referencia']; ?></td>
                             <td> <img src="<?= $URL."/public/images/comprobantes/".$reserva['imagen']; ?>" width="100px" alt="ad"></td>
                             <td> <?= $reserva['estado']; ?></td>
+
                             <form method="POST" action="<?= $URL ?>/app/controllers/reservas/notificacion.php">
-                                <td hidden ><input hidden type="" value = "<?= $reserva['id_usuario'] ?>" name="id_usuario_fk" type="text"></td>
+                                <td hidden  ><input  type="" value = "<?= $reserva['id_usuario'] ?>" name="id_usuario_fk" type="text"></td>
                                 <td hidden ><input name = "fecha_cita" value = "<?= $reserva['fecha_cita']; ?>" type="text"></td>   
                                 <td hidden ><input name = "hora_cita" value = "<?= $reserva['hora_cita']; ?>" type="text"></td>   
                                 <td style="text-align: center">

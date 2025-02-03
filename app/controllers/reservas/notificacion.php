@@ -16,7 +16,7 @@ if($sentencia->execute()){
     session_start();
     $_SESSION['mensaje'] = "Se envio la notificacion de la manera correcta ";
     $_SESSION['icono'] = 'success';
-    header('Location: '.$URL.'admin/reservas');
+    header('Location: '.$URL.'/admin/reservas');
 }else{
     session_start();
     $_SESSION['mensaje'] = "Error no se envio la notificacion";

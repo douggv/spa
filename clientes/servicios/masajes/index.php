@@ -39,7 +39,7 @@ $servicios = $query->fetchAll(PDO::FETCH_ASSOC);
                 <h5 class="card-title text-purple" style="color: #7a288a;"><?php echo $servicio['nombre']; ?></h5>
                 <p class="text-muted"><?php echo $servicio['descripcion']; ?></p>
                 <p class="card-text text-pink" style="color: #ff69b4;"><?php echo '$' . $servicio['precio']; ?></p>
-                <a href="servicios_calendario.php?id_servicio=<?php echo $servicio['id']; ?>" class="btn btn-pink" style="background-color: #ff69b4; color: #ffffff;">Reservar Servicio</a>
+                <a href="calendario.php?id_servicio=<?php echo $servicio['id']; ?>&categoria=masajista" class="btn btn-pink" style="background-color: #ff69b4; color: #ffffff;">Reservar Servicio</a>
             </div>
         </div>
     </div>

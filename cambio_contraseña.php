@@ -6,7 +6,6 @@
 <?php
 if(isset($_SESSION["recuperacion"])) {
     $email = $_SESSION["email_recuperacion"];
-    echo "$email";
 } else {
     header("Location: login.php");
     echo"Error";

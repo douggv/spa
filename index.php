@@ -9,7 +9,7 @@ include "nav.php";
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <h1 style="font-size : 40px;" class="text-white">Ruiller!</h1>
+                        <h1 style="font-size : 40px;" class="text-white">Rullier Beauty!</h1>
                         <p style ="font-size : 30px;" class="text-white">Relájate y renueva tu espíritu en un entorno de tranquilidad y bienestar</p>
                     </div>
                 </div>

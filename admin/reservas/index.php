@@ -33,15 +33,15 @@
                     $contador = 0;
                     foreach ($reservas as $reserva){
                         $contador = $contador + 1;
-                        $id_reserva = $reserva['id'];
+                        
                         ?>
                         <tr>
                             <td><center><?= $contador; ?></center></td>
-                            <td> <?= $reserva['title']; ?></td>
+                            <td> <?= $reserva['servicio_nombre']; ?></td>
                             <td> <?= $reserva['fecha_cita']; ?></td>
                             <td> <?= $reserva['hora_cita']; ?></td>
-                            <td> <?= $reserva['usuario']; ?></td>
-                            <td> <?= $reserva['metodo_pago']; ?></td>
+                            <td> <?= $reserva['usuario_nombre']; ?></td>
+                            <td> <?= $reserva['forma_pago']; ?></td>
                             <td> <?= $reserva['nombre_pago']; ?></td>
                             <td> <?= $reserva['referencia']; ?></td>
                             <td> <img src="<?= $URL."/public/images/comprobantes/".$reserva['imagen']; ?>" width="100px" alt="ad"></td>
@@ -49,8 +49,8 @@
 
                             <td style="text-align: center">
                                 <div class="btn-group" role="group" aria-label="Basic example">
-                                    <a href="<?= $URL ?>/app/controllers/reservas/aceptar_reserva.php?id=<?= $reserva['id'] ?>" class="btn btn-success">Aceptar</a>
-                                    <a href="<?= $URL ?>/admin/reservas/negar.php?id=<?= $reserva['id'] ?>" class="btn btn-danger">Negar</a>
+                                    <a href="<?= $URL ?>/app/controllers/reservas/aceptar_reserva.php?id=<?= $reserva['id_reserva'] ?>" class="btn btn-success">Aceptar</a>
+                                    <a href="<?= $URL ?>/app/controllers/reservas/negar.php?id=<?= $reserva['id_reserva'] ?>" class="btn btn-danger">Negar</a>
                                 </div>
                             </td>
                         </tr>

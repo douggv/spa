@@ -3,18 +3,21 @@ include '../../../app/config.php';
 
 $id = $_GET['id'];
 
-$sql = ('UPDATE reservas SET estado = "negado" WHERE id = :id');
+$estado = 'negado';
+
+$sql = ('UPDATE reservas SET estado = :estado WHERE id = :id');
 
 $sentencia = $pdo->prepare($sql);
 $sentencia->bindParam(':id', $id);
+$sentencia->bindParam(':estado', $estado);
 
 $sentencia->execute();
 
-if($sentencia->execute()){
+if($sentencia->rowCount() > 0){
     session_start();
-    $_SESSION['mensaje'] = "Se nego la reserva de la manera correcta ";
+    $_SESSION['mensaje'] = "Se ha negado la reserva de la manera correcta ";
     $_SESSION['icono'] = 'success';
-    header('Location: '.$URL.'admin/reservas');
+    header('Location: '.$URL.'/admin/reservas/lista_de_reservas_negadas.php');
 }else{
     session_start();
     $_SESSION['mensaje'] = "Error no se nego la reserva";

@@ -5,11 +5,11 @@ include '../../app/config.php';
 <?php include '../layout/cabecera.php';?>
 <?php include '../layout/nav.php';?>
 <?php include '../../app/controllers_clientes/notificaciones/listado_notificaciones.php"'; ?>
-<?php $sql = "SELECT * FROM notificacion where  id_usuario_fk = '$id_usuario_sesion' ";
+<?php $sql = "SELECT * FROM notificacion where  id_usuario = '$id_usuario_sesion' ";
 $query = $pdo->prepare($sql);
 $query->execute();
 $notificaciones = $query->fetchAll(PDO::FETCH_ASSOC);; ?>
-<section style =""  class="">
+<section>
 
     <div class="container">
         <div class="row">

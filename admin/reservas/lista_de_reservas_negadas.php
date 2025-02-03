@@ -37,11 +37,11 @@
                         ?>
                         <tr>
                             <td><center><?= $contador; ?></center></td>
-                            <td> <?= $reserva['title']; ?></td>
+                            <td> <?= $reserva['servicio_nombre']; ?></td>
                             <td> <?= $reserva['fecha_cita']; ?></td>
                             <td> <?= $reserva['hora_cita']; ?></td>
-                            <td> <?= $reserva['usuario']; ?></td>
-                            <td> <?= $reserva['metodo_pago']; ?></td>
+                            <td> <?= $reserva['usuario_nombre']; ?></td>
+                            <td> <?= $reserva['forma_pago']; ?></td>
                             <td> <?= $reserva['nombre_pago']; ?></td>
                             <td> <?= $reserva['referencia']; ?></td>
                             <td> <img src="<?= $URL."/public/images/comprobantes/".$reserva['imagen']; ?>" width="100px" alt="ad"></td>
