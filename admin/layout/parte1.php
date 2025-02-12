@@ -153,7 +153,7 @@
 
                 <i class="bi bi-file-pdf"></i>
                 <p>
-                    Guía de Servicio
+                    Guía de Usuario
 
                 </p>
 
