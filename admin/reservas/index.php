@@ -23,7 +23,6 @@
                         <th>Método de pago</th>
                         <th>Realizado Por</th>
                         <th>Referencia</th>
-                        <th>imagen</th>
                         <th>Estado</th>
                         <th>Acciones</th>
                     </tr>
@@ -44,7 +43,6 @@
                             <td> <?= $reserva['forma_pago']; ?></td>
                             <td> <?= $reserva['nombre_pago']; ?></td>
                             <td> <?= $reserva['referencia']; ?></td>
-                            <td> <img src="<?= $URL."/public/images/comprobantes/".$reserva['imagen']; ?>" width="100px" alt="ad"></td>
                             <td> <?= $reserva['estado']; ?></td>
 
                             <td style="text-align: center">
@@ -72,19 +70,18 @@
 
 </div>
 <?php include '../../admin/layout/parte2.php';?>
-
 <script>
     $(function () {
         $("#example1").DataTable({
             "pageLength": 5,
             "language": {
                 "emptyTable": "No hay información",
-                "info": "Mostrando _START_ a _END_ de _TOTAL_ reservas",
-                "infoEmpty": "Mostrando 0 a 0 de 0 reservas",
-                "infoFiltered": "(Filtrado de _MAX_ total reservas)",
+                "info": "Mostrando _START_ a _END_ de _TOTAL_ auditorias",
+                "infoEmpty": "Mostrando 0 a 0 de 0 auditorias",
+                "infoFiltered": "(Filtrado de _MAX_ total auditorias)",
                 "infoPostFix": "",
                 "thousands": ",",
-                "lengthMenu": "Mostrar _MENU_ reservas",
+                "lengthMenu": "Mostrar _MENU_ auditorias",
                 "loadingRecords": "Cargando...",
                 "processing": "Procesando...",
                 "search": "Buscador:",
@@ -125,3 +122,67 @@
         }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
     });
 </script>
+
+
+<style>
+    .card-outline.card-primary {
+      border-color: #FFC5C5; /* Tono de carne claro */
+    }
+    
+    .card-outline.card-primary .card-header {
+      background-color: #FFC5C5; /* Tono de carne claro */
+      color: #333;
+    }
+    
+    .card-outline.card-primary .card-title {
+      color: #333;
+    }
+    
+    .table-striped tbody tr:nth-of-type(odd) {
+      background-color: #FFD7BE; /* Tono de carne claro y cálido */
+    }
+    
+    .table-striped tbody tr:nth-of-type(even) {
+      background-color: #FFF;
+    }
+    
+    .table-striped tbody tr:hover {
+      background-color: #FFC2C7; /* Tono de carne rosado claro */
+    }
+    
+    .dataTables_wrapper .dataTables_length select {
+      background-color: #FFC5C5; /* Tono de carne claro */
+      color: #333;
+    }
+    
+    .dataTables_wrapper .dataTables_filter input {
+      background-color: #FFC5C5; /* Tono de carne claro */
+      color: #333;
+    }
+    
+    .dataTables_wrapper .dataTables_paginate .paginate_button {
+      background-color: #FFC5C5; /* Tono de carne claro */
+      color: #333;
+    }
+    
+    .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+      background-color: #FFC2C7; /* Tono de carne rosado claro */
+    }
+    
+    .dataTables_wrapper .dataTables_info {
+      color: #333;
+    }
+    
+    .dataTables_wrapper .dataTables_processing {
+      background-color: #FFC5C5; /* Tono de carne claro */
+      color: #333;
+    }
+    .dt-button {
+      background-color: #FFC5C5; /* Tono de carne claro */
+      color: #333;
+    }
+    
+    .dt-button:hover {
+      background-color: #FFC2C7; /* Tono de carne rosado claro */
+    }
+</style>

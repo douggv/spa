@@ -148,6 +148,19 @@
                 </a>
                 
             </li> 
+            <li class="nav-item ">
+            <a class="nav-link active" aria-current="page" href="ruta/al/archivo.pdf" download="guia_de_servicio.pdf">
+
+                <i class="bi bi-file-pdf"></i>
+                <p>
+                    Guía de Servicio
+
+                </p>
+
+            </a>
+
+                
+            </li> 
                 
             </li>
             <li class="nav-item "  ">

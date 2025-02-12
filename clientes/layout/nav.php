@@ -37,6 +37,7 @@ include("validacion.php");
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-link active" aria-current="page" href="<?= $URL ?>/clientes/index.php">Inicio</a>
+                    <a class="nav-link active" aria-current="page" href="<?= $URL ?>/clientes/contacto/index.php">Contacto</a>
                     <li  class="nav-item dropdown">
                         <a style="transition: color 0.2s ease;" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Servicios
@@ -48,7 +49,8 @@ include("validacion.php");
                             <li><a class="dropdown-item" href="<?= $URL ?>/clientes/servicios/masajes/index.php" style="transition: color 0.2s ease;">Masajes</a></li>
                         </ul>
                     </li>
-                    
+                    <a class="nav-link active" aria-current="page" href="<?= $URL ?>/clientes/notificaciones/index.php">Notificaciones</a>
+                    <a class="nav-link active" aria-current="page" href="ruta/al/archivo.pdf" download="guia_de_servicio.pdf">guía de servicio</a>
                 </div>
                 <div style="margin-left: auto;">
                     <a href="<?= $URL ?>/clientes/perfil/index.php" type="button" style="background-color:#FF69B4; border-color:#FF69B4 " class="btn btn-success mx-2">

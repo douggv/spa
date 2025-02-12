@@ -34,7 +34,7 @@ include '../../../app/controllers/servicios/datos_del_servicio.php';
         slotMinTime: '08:00',
         slotMaxTime: '19:00',
         events: {
-            url: 'http://localhost/spa/app/controllers_clientes/agendas/listado_de_agendas_masajista.php',
+            url: 'http://localhost/spa/app/controllers_clientes/agendas/listado_de_agendas_esteticista.php',
             method: 'GET',
             data: { load: true }
         },
@@ -79,7 +79,7 @@ include '../../../app/controllers/servicios/datos_del_servicio.php';
 
                 //alert(fecha2);
             
-                var url = "http://localhost/spa/app/controllers_clientes/agendas/verificar_horario_masaje.php" ;  
+                var url = "http://localhost/spa/app/controllers_clientes/agendas/verificar_horario_esteticista.php" ;  
               
               $.get(url,{fecha2:fecha2},function (datos) {
                 

@@ -4,7 +4,7 @@ $fecha_cita = $_POST['fecha_cita'];
 $hora_cita = $_POST['hora_cita'];
 $id_usuario_fk = $_POST['id_usuario_fk'];
 
-$mensaje = "Tu reserva para el día: ".$fecha_cita." a las: ".$hora_cita." ha sido aceptada";
+$mensaje = "Tu reserva para el día: ".$fecha_cita." a las: ".$hora_cita." ha sido negada"; 
 
 $sentencia = $pdo->prepare('INSERT INTO notificaciones
 (id_usuario_fk, mensaje)
@@ -24,3 +24,4 @@ if($sentencia->execute()){
     header('Location: '.$URL.'/admin/reservas.');
 }
 
+?>

@@ -67,7 +67,7 @@ include '../../app/config.php';
                                 <hr>
                                 <div class="row">
                                     <div class="col-md-12">
-                                    <a class="btn btn-secondary w-40" href="index.php">Regresar</a>
+                                    <a class="btn btn-secondary w-40" href="../index.php">Regresar</a>
                                     <input style="background-color:#FF69B4; border-color:#FF69B4 " type="submit" class="btn btn-success w-40" value="Actualizar">
                                     </div>
                                 </div>

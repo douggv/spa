@@ -50,6 +50,16 @@
                             <td style="text-align: center">
                                 <div class="btn-group" role="group" aria-label="Basic example">
                                     <a href="<?= $URL ?>/app/controllers/reservas/aceptar_reserva.php?id=<?= $reserva['id'] ?>" class="btn btn-success">Aceptar</a>
+                                    
+                                    <form method="POST" action="<?= $URL ?>/app/controllers/reservas/notificacion_negada.php">
+                                        <td hidden  ><input  type="" value = "<?= $reserva['id_usuario'] ?>" name="id_usuario_fk" type="text"></td>
+                                        <td hidden ><input name = "fecha_cita" value = "<?= $reserva['fecha_cita']; ?>" type="text"></td>   
+                                        <td hidden ><input name = "hora_cita" value = "<?= $reserva['hora_cita']; ?>" type="text"></td>   
+                                        <td style="text-align: center">
+                                            <div class="btn-group" role="group" aria-label="Basic example">
+                                                <input type="submit" value="Enviar notificación" class="btn btn-success">
+                                            </div>
+                                    </form>                               
                                 </div>
                             </td>
                         </tr>

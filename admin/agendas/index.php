@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
     headerToolbar: {
       left: 'today,prev,next',
       center: 'title',
-      right: 'dayGridMonth,timeGridWeek,timeGridDay'
+      right: 'dayGridMonth'
     },
     locale : 'es',
     dateClick: function(info) {
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Abre el modal de Bootstrap
         $('#txtFecha').val(info.dateStr);
         $('#txtFechaCulminacion').val(info.dateStr);
-        $('#modalEventos').modal('show');
+        //$('#modalEventos').modal('show');
       }
     },
     
@@ -70,23 +70,25 @@ eventClick: function(info) {
     color: info.event.extendedProps.colorFondo,
     descripcion: info.event.extendedProps.descripcion,
     categoria: info.event.extendedProps.categoria,
-    cliente: info.event.extendedProps.cliente,
-    id_evento: info.event.extendedProps.id_evento
+    cliente: info.event.extendedProps.usuario_nombre,
+    id_reserva: info.event.extendedProps.id_reserva,
+    hora: info.event.extendedProps.hora_cita,
+    
   };
-  $('#id_evento').val(NuevoEvento.id_evento);
+  $('#id_reserva').val(NuevoEvento.id_reserva);
   $('#titulo').val(NuevoEvento.title);
   $('#txtdescripcion').val(NuevoEvento.descripcion);
   $('#txtcategoria').val(NuevoEvento.categoria);
   $('#txtcliente').val(NuevoEvento.cliente);
   $('#txtColor').val(NuevoEvento.color);
-  $('#txtID').val(NuevoEvento.id_evento);
+  $('#txtID').val(NuevoEvento.id_reserva);
+  $('#txtHora').val(NuevoEvento.hora);
 
   // fecha y hor de inicio "start"
   var fechaInicio = new Date(info.event.start);
   var fecha = fechaInicio.getFullYear() + '-' + (fechaInicio.getMonth() + 1) + '-' + fechaInicio.getDate();
   $('#txtFecha').val(fecha);
   var horaInicio = fechaInicio.getHours() + ':' + fechaInicio.getMinutes();
-  $('#txtHora').val(horaInicio);
 
   // fecha y hor de culminacion "end"
   var fechaCulminacion = new Date(info.event.end);
@@ -135,7 +137,7 @@ eventClick: function(info) {
 
 function RecolectarDatosGUI() {
   NuevoEvento = {
-    id_evento: $('#txtID').val(),
+    id_reserva: $('#txtID').val(),
     title: $('#titulo').val(),
     start: $('#txtFecha').val() + ' ' + $('#txtHora').val(),
     end: $('#txtFechaCulminacion').val() + ' ' + $('#txtHoraCulminacion').val(),
@@ -143,6 +145,8 @@ function RecolectarDatosGUI() {
     descripcion: $('#txtdescripcion').val(), 
     categoria: $('#txtcategoria').val(), 
     cliente: $('#txtcliente').val(), 
+    hora: $('#txtHora').val(),
+
   };
   return NuevoEvento
 }
@@ -155,14 +159,15 @@ function EnviarInformacion(accion, objetoEvento) {
   var calendar = getCalendar();
   var datos = {
     accion: accion,
-    id_evento: objetoEvento.id_evento,
+    id_reserva: objetoEvento.id_reserva,
     title: objetoEvento.title,
     start: objetoEvento.start,
     end: objetoEvento.end,
     color: objetoEvento.color,
     descripcion: objetoEvento.descripcion,
     categoria: objetoEvento.categoria,
-    cliente: objetoEvento.cliente
+    cliente: objetoEvento.usuario_nombre,
+    hora: objetoEvento.hora
   };
   console.log(datos); 
   $.ajax({
@@ -226,22 +231,6 @@ function EnviarInformacion(accion, objetoEvento) {
         </div>
         
         <div class= "row">
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="fecha" class="form-label">Fecha Culminacion</label>    
-              <input type="text"  class="form-control" id="txtFechaCulminacion" name="fechaCulminacion" required>
-            </div>
-            
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="horaCulminacion" class="form-label">Hora Culminacion</label>    
-              <input placeholder="00:00" type="text" class="form-control" id="txtHoraCulminacion" name="horaCulminacion" required>
-            </div>
-          </div>
-
-        </div>
-        <div class= "row">
 
           <div class="col-md-6">
             <div class="form-group">
@@ -258,28 +247,14 @@ function EnviarInformacion(accion, objetoEvento) {
           </div>
 
         </div>
-        <div class= "row">
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="color" class="form-label">Color</label>    
-              <input type="color" class="form-control" id="txtColor" name="color" required>
-            </div>
-            
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="descripcion" class="form-label">Descripcion</label>    
-              <textarea class="form-control" id="txtdescripcion" name="descripcion" required></textarea>
 
-            </div>
-          </div>
         
       </div>
       <div class="modal-footer">
-        <button type="button" id="btnAgregar" class="btn btn-success" >Agregar</button>
+
         <button type="button" id="btnModificar" class="btn btn-secondary" >Modificar</button>
         <button type="button" id="btnBorrar" class="btn btn-danger" >Borrar</button>
-        <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
+
         
       </div>
     </div>
