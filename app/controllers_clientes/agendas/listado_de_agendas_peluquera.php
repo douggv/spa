@@ -15,7 +15,7 @@ INNER JOIN
         
         
         
-	 where categoria= 'peluquera' ";
+	 where categoria= 'peluquera' and estado = 'aceptado' ";
 $query = $pdo->prepare($sql);
 $query->execute();
 $eventos = $query->fetchAll(PDO::FETCH_ASSOC);
