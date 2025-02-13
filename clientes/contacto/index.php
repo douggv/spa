@@ -35,7 +35,7 @@ include '../../app/config.php';
                         <a href="https://www.instagram.com/rullier_spa" class="btn btn-primary" target="_blank">Visitar</a>
                     </div>
                     <div class="social-card mt-2">
-                        <i class="fab fa-gmail" style="font-size: 30px; color: #ff9800;"></i>
+                    <i class="bi bi-envelope" style="font-size: 30px; color:rgb(39, 80, 168);"></i>
                         <h3>Gmail</h3>
                         <a href="mailto:Beautyrullier@gmail.com" class="btn btn-primary">Visitar</a>
                     </div>
@@ -51,3 +51,13 @@ include '../../app/config.php';
     </div>
   </div>
 </section>
+
+<style>
+            body {
+            background-image: url('../../fondo.jpg');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position: center;
+            background-attachment: fixed;
+            }
+        </style>
