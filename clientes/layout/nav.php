@@ -50,7 +50,7 @@ include("validacion.php");
                         </ul>
                     </li>
                     <a class="nav-link active" aria-current="page" href="<?= $URL ?>/clientes/notificaciones/index.php">Notificaciones</a>
-                    <a class="nav-link active" aria-current="page" href="ruta/al/archivo.pdf" download="guia_de_servicio.pdf">Guía de Usuario</a>
+                    <a class="nav-link active" aria-current="page" href="<?php echo $URL ?>/clientes/layout/Guia de usuario - Cliente.pdf" download="Guia de usuario - Cliente.pdf">Guía de Usuario</a>
                 </div>
                 <div style="margin-left: auto;">
                     <a href="<?= $URL ?>/clientes/perfil/index.php" type="button" style="background-color:#FF69B4; border-color:#FF69B4 " class="btn btn-success mx-2">

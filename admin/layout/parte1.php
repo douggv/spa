@@ -149,7 +149,7 @@
                 
             </li> 
             <li class="nav-item ">
-            <a class="nav-link active" aria-current="page" href="ruta/al/archivo.pdf" download="guia_de_servicio.pdf">
+            <a class="nav-link active" aria-current="page" href="<?= $URL ?>/admin/layout/Guia de usuario - Gerente.pdf" download="Guia de usuario - Gerente.pdf">
 
                 <i class="bi bi-file-pdf"></i>
                 <p>
