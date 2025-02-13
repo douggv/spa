@@ -45,7 +45,7 @@
                         <div class="icon">
                         <i class="bi bi-calendar4-range"></i>
                         </div>
-                        <a href="usuarios/nuevo_usuario.php" class="small-box-footer">Registrar <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="reservas/index.php" class="small-box-footer">Registrar <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>            
             </div>
@@ -59,7 +59,7 @@
                         <div class="icon">
                         <i class="bi bi-filter-square"></i>
                         </div>
-                        <a href="usuarios/nuevo_usuario.php" class="small-box-footer">Registrar <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="reportes/index.php" class="small-box-footer">Registrar <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>            
             </div>
