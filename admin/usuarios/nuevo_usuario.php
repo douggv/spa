@@ -54,11 +54,11 @@
                             <div class="form-group">
                                 <label for="">Cargo</label>
                                 <select name="rol" id="" class="form-control form-control-rosado">
-                                    <option value="Cliente">Cliente</option>
-                                    <option value="Peluquera">Peluquera</option>
-                                    <option value="Manicurista">Manicurista</option>
-                                    <option value="Esticista">Esticista</option>
-                                    <option value="Masajista">Masajista</option>
+                                    <option value="cliente">Cliente</option>
+                                    <option value="peluquera">Peluquera</option>
+                                    <option value="manicurista">Manicurista</option>
+                                    <option value="esticista">Esticista</option>
+                                    <option value="masajista">Masajista</option>
                                 </select>
                             </div>
                             </div>
