@@ -30,7 +30,7 @@ if($result['rol'] == "empresa"){
     }
     } catch(Exception $e) {
         session_start();
-        $_SESSION['mensaje'] = "No se puede eliminar el  usuario porque tiene citas pendientes";
+        $_SESSION['mensaje'] = "No se puede eliminar el  usuario porque tiene citas o acciones pendientes";
         $_SESSION['icono'] = "error";
         header("Location: ".$URL."/admin/usuarios/index.php");
     }

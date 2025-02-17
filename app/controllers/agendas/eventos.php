@@ -34,7 +34,7 @@ switch($accion){
     case 'modificar':
          echo "modificar";    // instruccion para modificar
 
-        $id_evento = $_POST['id_evento'];
+        $id_reserva = $_POST['id_reserva'];
         $title = $_POST['title'];
         $start = $_POST['start'];
         $end = $_POST['end'];
@@ -43,15 +43,9 @@ switch($accion){
         $cliente = $_POST['cliente'];
 
 
-        $sql = "UPDATE eventos SET title = ?, descripcion = ?, start = ?, end = ?, categoria = ?, cliente = ? WHERE id_evento = ?";
+        $sql = "UPDATE reservas SET title = ?, start = ?, end = ?, categoria = ? WHERE id = ?";
         $query = $pdo->prepare($sql);
-        $query->bindParam(1, $title, PDO::PARAM_STR);
-        $query->bindParam(2, $descripcion, PDO::PARAM_STR);
-        $query->bindParam(3, $start, PDO::PARAM_STR);
-        $query->bindParam(4, $end, PDO::PARAM_STR);
-        $query->bindParam(5, $categoria, PDO::PARAM_STR);
-        $query->bindParam(6, $cliente, PDO::PARAM_STR);
-        $query->bindParam(7, $id_evento, PDO::PARAM_INT);
+       
         $query->execute();
 
         echo json_encode($query);
@@ -60,13 +54,13 @@ switch($accion){
         echo "eliminar"; // instruccion para borrar
         $respuesta = false ;
 
-        if(isset($_POST['id_evento'])){
+        if(isset($_POST['id_reserva'])){
 
-            $id_evento = $_POST['id_evento'];
+            $id_reserva = $_POST['id_reserva'];
 
-            $sql = "DELETE FROM eventos WHERE id_evento = ?";
+            $sql = "DELETE FROM eventos WHERE id_reserva = ?";
             $query = $pdo->prepare($sql);
-            $query->bindParam(1, $id_evento, PDO::PARAM_INT);
+            $query->bindParam(1, $id_reserva, PDO::PARAM_INT);
             $query->execute();
             
         }

@@ -191,6 +191,7 @@ function EnviarInformacion(accion, objetoEvento) {
 
 <!-- Modal de Formulario Agregar, Modificar y Borrar -->
 <div class="modal fade" id="modalEventos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<form action="../../app/controllers/agendas/modificar.php" method="POST">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -202,7 +203,7 @@ function EnviarInformacion(accion, objetoEvento) {
         <div class="row">
           <div class="col-md-2">
             <div class="form-group">
-              <label for="txtID" class="form-label">ID</label>
+              <label  for="txtID" class="form-label">ID</label>
               <input type="text" class="form-control" id="txtID" name="id" readonly>
             </div>
           </div>
@@ -235,14 +236,14 @@ function EnviarInformacion(accion, objetoEvento) {
           <div class="col-md-6">
             <div class="form-group">
               <label for="categoria" class="form-label">Categoría</label>    
-              <input type="text" class="form-control" id="txtcategoria" name="categoria" required>
+              <input readonly type="text" class="form-control" id="txtcategoria" name="categoria" required>
             </div>
             
           </div>
           <div class="col-md-6">
             <div class="form-group">
               <label for="cliente" class="form-label">Cliente</label>    
-              <input type="text" class="form-control" id="txtcliente" name="cliente" required>
+              <input readonly type="text" class="form-control" id="txtcliente" name="cliente" required>
             </div>
           </div>
 
@@ -251,9 +252,13 @@ function EnviarInformacion(accion, objetoEvento) {
         
       </div>
       <div class="modal-footer">
+        
+          
+          
+        <button type="submit"   class="btn btn-secondary" >Modificar</button>
+          
+        </form>
 
-        <button type="button" id="btnModificar" class="btn btn-secondary" >Modificar</button>
-        <button type="button" id="btnBorrar" class="btn btn-danger" >Borrar</button>
 
         
       </div>

@@ -1,10 +1,13 @@
 <?php
 include '../../../app/config.php';
+$razon = $_POST['razon'];
 $fecha_cita = $_POST['fecha_cita'];
 $hora_cita = $_POST['hora_cita'];
 $id_usuario_fk = $_POST['id_usuario_fk'];
+$id_reserva = $_POST['id_reserva'];
 
-$mensaje = "Tu reserva para el día: ".$fecha_cita." a las: ".$hora_cita." ha sido negada"; 
+
+$mensaje = "Tu reserva para el día: ".$fecha_cita." a las: ".$hora_cita." ha sido negada por el motivo de: '".$razon . "' al momento de solicitar la cita colocar el numero " . $id_reserva . " como referencia de la reserva";     
 
 $sentencia = $pdo->prepare('INSERT INTO notificaciones
 (id_usuario_fk, mensaje)
