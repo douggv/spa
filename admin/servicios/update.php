@@ -46,7 +46,7 @@
                                 <div class="form-group">
                                     <label for="">Categoria</label>
                                     <select name="categoria" id="" class="form-control form-control-rosado">                                    
-                                        <option value="peluqera" <?php if ($categoria == "peluquera") echo "selected"; ?>>Peluqera</option>
+                                        <option value="peluquera" <?php if ($categoria == "peluquera") echo "selected"; ?>>Peluquera</option>
                                         <option value="manicurista" <?php if ($categoria == "manicurista") echo "selected"; ?>>Manicurista</option>
                                         <option value="esteticista" <?php if ($categoria == "esteticista") echo "selected"; ?>>Esticista</option>
                                         <option value="masajista" <?php if ($categoria == "masajista") echo "selected"; ?>>Masajista</option>
