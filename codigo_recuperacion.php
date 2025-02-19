@@ -19,7 +19,7 @@ include "nav.php";
                             <input type="email" class="form-control" id="correo" name="email" aria-describedby="emailHelp" style="border-color: #FFC0CB;">
                         </div> 
                         <div class="mb-3">
-                            <label for="codigo" class="form-label" style="color: black;">Coloca el Códico de Recuperación</label>
+                            <label for="codigo" class="form-label" style="color: black;">Coloca el Código de Recuperación</label>
                             <input type="number" class="form-control" id="codigo" name="codigo"  style="border-color: #FFC0CB;">
                         </div>                        
                         <button type="submit" class="btn btn-primary" style="background-color:#FF69B4; border-color: #FF69B4;">Verificar Códico</button>
