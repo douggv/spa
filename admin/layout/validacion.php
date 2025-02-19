@@ -15,7 +15,7 @@ session_start();
         }
     }else{
         echo "no ha pasado por el login";
-        //header(header: "Location: ".$URL."/login.php");
+        header(header: "Location: ".$URL."/login.php");
     }
 
 ?>

@@ -13,7 +13,7 @@ session_start();
         }
     }else{
         echo "no ha pasado por el login";
-        //header("Location: ".$URL."/login");
+        header("Location: ".$URL."/login");
         
     }
     
