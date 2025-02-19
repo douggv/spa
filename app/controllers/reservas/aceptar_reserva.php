@@ -11,6 +11,15 @@ $sentencia->bindParam(':id', $id);
 $sentencia->execute();
 
 if($sentencia->execute()){
+
+    $mensaje = "Se acepto la reserva de la manera correcta por: ".$nombre_usuario_sesion;
+    $sql = "INSERT INTO auditorias (mensaje) VALUES (?)";
+    $query = $pdo->prepare($sql);
+    $query->bindParam(1, $mensaje, PDO::PARAM_STR);
+        
+    $query->execute();
+
+
     session_start();
     $_SESSION['mensaje'] = "Se acepto la reserva de la manera correcta ";
     $_SESSION['icono'] = 'success';

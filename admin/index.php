@@ -54,7 +54,7 @@
                     <div style = "background-color: #c8a2c8" class="small-box ">
                         <div class="inner">
                             <h3>Visualizar</h3>
-                            <p>Reportes/p>
+                            <p>Reportes</p>
                         </div>
                         <div class="icon">
                         <i class="bi bi-filter-square"></i>
