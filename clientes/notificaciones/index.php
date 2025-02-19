@@ -26,7 +26,6 @@ $notificaciones = $query->fetchAll(PDO::FETCH_ASSOC);
           <div class="card notification-card" data-id="<?php echo $notificacion['id']; ?>"> <div class="card-body">
               <h5 class="card-title"><?php echo $notificacion['mensaje']; ?></h5>
               <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-primary mark-as-read">Marcar como leída</button>
                 <form action="eliminar_notificacion.php" method="POST">
                     <input type="hidden" name="id" value="<?php echo $notificacion['id']; ?>">
                     <button type="submit" class="btn btn-sm btn-danger delete-notification">Eliminar</button>
